@@ -1,38 +1,137 @@
-.App {
-  text-align: center;
+html, body {
+  height: 100vh;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+a {
+  text-decoration: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.container {
+  background-color: white;
+  height: 100vh;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.header {
+  background-color: green;
   display: flex;
-  flex-direction: column;
+  color: #FFD700;
+  font-size: 20pt;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  border-bottom-width: 10;
+  border-bottom-color: '#00ee00';
+  height: 20%
 }
 
-.App-link {
-  color: #61dafb;
+.body {
+  display: flex;
+  flex-direction: column;
+  align-items: space-between;
+  justify-content: space-between;
+  height: 62%;
+
+
+  -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
+  -moz-animation: fadein 2; /* Firefox < 16 */
+   -ms-animation: fadein 2s; /* Internet Explorer */
+    -o-animation: fadein 2s; /* Opera < 12.1 */
+       animation: fadein 2s;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.start {
+  align-items: center;
+  justify-content: center;
 }
+
+.footer {
+  background-color: red;
+  border-top-width: 10;
+  border-top-color: #ff6666;
+  height: 18%;    
+  padding: 20px;
+}
+
+.label {
+    color: #777;
+    font-size: 36pt;
+    padding: 26px;
+    font-weight: 500
+}
+
+.input {
+  width: 100%;
+  margin-top: 5%;
+}
+
+input {
+  font-size: 36pt;
+  width: 10%;
+}
+
+.first-nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+.nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.start {
+  display: flex;
+  align-items: center;
+  justify-items: center;
+}
+
+.button {
+  display: inline-block;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  background-color: grey;
+  border-radius: 20px;
+  margin: 30px;
+  font-size: 26px;
+  font-weight: 500;
+  color: #FFD700;
+  transition: transform 0.2s;
+}
+
+.button:hover {
+  background-color: rgb(165, 165, 165);
+  border-color: #FFD700;
+  transform: translate(2px,2px);
+  box-shadow: 5px 5px 5px 5px #555; ;
+}
+
+@keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+  }
+  
+  /* Firefox < 16 */
+  @-moz-keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+  }
+  
+  /* Safari, Chrome and Opera > 12.1 */
+  @-webkit-keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+  }
+  
+  /* Internet Explorer */
+  @-ms-keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+  }
+  
+  /* Opera < 12.1 */
+  @-o-keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+  }
