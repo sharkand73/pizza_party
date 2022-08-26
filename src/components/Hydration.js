@@ -1,32 +1,36 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Header from './Header';
 import Footer from "./Footer";
 import Next from './Next';
 import Back from './Back';
 
-const Hydration = () => {
+const Hydration = ({ values, setValues }) => {
     const next = '/yeast';
     const back = '/dough';
 
-    const [hydration, setHydration] = useState(60);
+    const [hydration, setHydration] = useState(values.hydration);
+    useEffect(() => {
+        const temp = {...values};
+        temp.hydration = hydration;
+        setValues(temp);
+    },[hydration]);
 
     return (
         <div className = 'container'>
             <Header text = '' />
             <div className = 'body'>
-                <div className = 'input'>
+                <div className = 'input-div'>
                     <label className = 'label'>
-                 Hydration (%)?
+                 Hydration?
                     </label>
                     <input type='number'
-                // value = {hydration} 
-                // onChange = {value => setHydration(value)}
-                // minValue = {55}
-                // maxValue = {90}
-                // rounded 
-                // rightButtonBackgroundColor='#aaa'
-                // leftButtonBackgroundColor='#aaa'
+                    id = 'hydration-input'
+                    value = {hydration} 
+                    onChange = {e => setHydration(e.target.value)}
+                    min = {55}
+                    max = {90}
                 />
+                <label className='unit'>%</label>
                 </div>
                 <div className='nav'>                    
                     <Back link={back} />

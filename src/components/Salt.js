@@ -1,14 +1,19 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Header from './Header';
 import Footer from "./Footer";
 import Next from './Next';
 import Back from './Back';
 
-const Salt = () => {
+const Salt = ({ values, setValues }) => {
     const next = '/oil';
     const back = '/yeast';
 
-    const [salt, setSalt] = useState(2.5);
+    const [salt, setSalt] = useState(values.salt);
+    useEffect(() => {
+        const temp = {...values};
+        temp.salt = salt;
+        setValues(temp);
+    },[salt])
 
     return (
         <div className = 'container'>
@@ -16,19 +21,17 @@ const Salt = () => {
             <div className = 'body'>
                 <div className = 'input'>
                     <label className = 'label'>
-                    Salt (%)?
+                    Salt?
                     </label>
                     <input type='number'
-                // value = {salt} 
-                // onChange = {value => setSalt(value)}
-                // minValue = {0}
-                // maxValue = {4}
-                // rounded 
-                // valueType = 'real'
-                // step = {0.1}
-                // rightButtonBackgroundColor='#aaa'
-                // leftButtonBackgroundColor='#aaa'
+                    id = 'salt-input'
+                    value = {salt} 
+                    onChange = {e => setSalt(e.target.value)}
+                    min = {0}
+                    max = {4}
+                    step = {0.1}
                 />
+                <label className='unit'>%</label>
                 </div>
                 <div className='nav'>
                     <Back link={back} />

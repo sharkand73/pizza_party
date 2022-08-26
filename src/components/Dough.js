@@ -1,30 +1,34 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Header from './Header';
 import Footer from "./Footer";
 import Next from './Next';
 
-const Dough = () => {
+const Dough = ({ values, setValues} ) => {
     const next = '/hydration';
 
-    const [doughWeight, setDoughWeight] = useState(1000);
+    const [doughWeight, setDoughWeight] = useState(values.doughWeight);
+    useEffect(() => {
+        const temp = {...values};
+        temp.doughWeight = doughWeight;
+        setValues(temp);
+    },[doughWeight]);
 
     return (
         <div className = 'container'>
             <Header text = '' />
             <div className = 'body'>
-                <div className = 'input'>
+                <div className = 'input-div'>
                     <label className = 'label'>
-                    Weight of dough (g)?
+                    Weight of dough?
                     </label>
                     <input type='number' 
-                // value = {doughWeight} 
-                // onChange = {value => setDoughWeight(value)}
-                // minValue = {150}
-                // maxValue = {10000}
-                // rounded 
-                // rightButtonBackgroundColor='#aaa'
-                // leftButtonBackgroundColor='#aaa'
+                    id = 'dough-input'
+                    value = {doughWeight} 
+                    onChange = {e => setDoughWeight(e.target.value)}
+                    min = {150}
+                    max = {10000}
                 />
+                <label className='unit'>g</label>
                     </div>
                 <div className='first-nav'>
                     <Next link={next} />

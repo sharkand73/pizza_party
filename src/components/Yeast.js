@@ -1,14 +1,19 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Header from './Header';
 import Footer from "./Footer";
 import Next from './Next';
 import Back from './Back';
 
-const Yeast = () => {
+const Yeast = ({ values, setValues }) => {
     const next = '/salt';
     const back = '/hydration';
 
-    const [yeast, setYeast] = useState(2.0);
+    const [yeast, setYeast] = useState(values.yeast);
+    useEffect(() => {
+        const temp = {...values};
+        temp.yeast = yeast;
+        setValues(temp);
+    },[yeast]);
 
     return (
         <div className = 'container'>
@@ -16,18 +21,16 @@ const Yeast = () => {
             <div className = 'body'>
                 <div className = 'input'>
                     <label className = 'label'>
-                    Yeast (%)?
+                    Yeast?
                     </label>
                     <input type='number'
-                // value = {yeast} 
-                // onChange = {value => setYeast(value)}
-                // minValue = {0.1}
-                // rounded 
-                // valueType = 'real'
-                // step = {0.1}
-                // rightButtonBackgroundColor='#aaa'
-                // leftButtonBackgroundColor='#aaa'
+                    id = 'yeast-input'
+                    value = {yeast} 
+                    onChange = {e => setYeast(e.target.value)}
+                    min = {0.1}
+                    step = {0.1}
                 />
+                <label className='unit'>%</label>
                 </div>
                 <div className='nav'>
                     <Back link={back} />

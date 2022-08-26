@@ -20,13 +20,13 @@ const [values, setValues] = useState(defaultValues);
     <Router>
       <div className="App">      
         <Routes>
-          <Route index element={<Home />}  />
-          <Route path='dough' element={<Dough />}  />
-          <Route path='hydration' element={<Hydration />}  />
-          <Route path='yeast' element={<Yeast />}  />
-          <Route path='salt' element={<Salt />}  />
-          <Route path='oil' element={<Oil />}  />
-          <Route path='results' element={<Results />}  />
+          <Route index element={<Home values={values} setValues={setValues} />}  />
+          <Route path='dough' element={<Dough values={values} setValues={setValues} />}  />
+          <Route path='hydration' element={<Hydration values={values} setValues={setValues} />}  />
+          <Route path='yeast' element={<Yeast values={values} setValues={setValues} />}  />
+          <Route path='salt' element={<Salt values={values} setValues={setValues} />}  />
+          <Route path='oil' element={<Oil values={values} setValues={setValues} />}  />
+          <Route path='results' element={<Results values={values} />}  />
         </Routes>      
       </div>
     </Router>
