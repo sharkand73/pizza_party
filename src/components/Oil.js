@@ -3,6 +3,7 @@ import Header from './Header';
 import Footer from "./Footer";
 import Calculate from './Calculate';
 import Back from './Back';
+import { ranges } from '../supporting-code/Settings';
 
 const Oil = ({ values, setValues }) => {    
     const back = '/salt';
@@ -19,7 +20,7 @@ const Oil = ({ values, setValues }) => {
         <div className = 'container'>
             <Header text = '' />
             <div className = 'body'>
-                <div className = 'input'>
+                <div className = 'input-div'>
                     <label className = 'label'>
                     Oil?
                     </label>
@@ -27,9 +28,9 @@ const Oil = ({ values, setValues }) => {
                     id = 'oil-input'
                     value = {oil} 
                     onChange = {e => setOil(e.target.value)}
-                    minValue = {0}
-                    maxValue = {10}
-                    step = {0.1}
+                    min = {ranges.oilMin}
+                    max = {ranges.oilMax}
+                    step = {ranges.oilStep}
                 />
                 <label className='unit'>%</label>
                 </div>                

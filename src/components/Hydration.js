@@ -3,6 +3,7 @@ import Header from './Header';
 import Footer from "./Footer";
 import Next from './Next';
 import Back from './Back';
+import { ranges } from '../supporting-code/Settings';
 
 const Hydration = ({ values, setValues }) => {
     const next = '/yeast';
@@ -27,8 +28,9 @@ const Hydration = ({ values, setValues }) => {
                     id = 'hydration-input'
                     value = {hydration} 
                     onChange = {e => setHydration(e.target.value)}
-                    min = {55}
-                    max = {90}
+                    min = {ranges.hydrationMin}
+                    max = {ranges.hydrationMax}
+                    step = {ranges.hydrationStep}
                 />
                 <label className='unit'>%</label>
                 </div>

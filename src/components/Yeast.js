@@ -3,6 +3,7 @@ import Header from './Header';
 import Footer from "./Footer";
 import Next from './Next';
 import Back from './Back';
+import { ranges } from '../supporting-code/Settings';
 
 const Yeast = ({ values, setValues }) => {
     const next = '/salt';
@@ -19,7 +20,7 @@ const Yeast = ({ values, setValues }) => {
         <div className = 'container'>
             <Header text = '' />
             <div className = 'body'>
-                <div className = 'input'>
+                <div className = 'input-div'>
                     <label className = 'label'>
                     Yeast?
                     </label>
@@ -27,8 +28,9 @@ const Yeast = ({ values, setValues }) => {
                     id = 'yeast-input'
                     value = {yeast} 
                     onChange = {e => setYeast(e.target.value)}
-                    min = {0.1}
-                    step = {0.1}
+                    min = {ranges.yeastMin}
+                    max = {ranges.yeastMax}
+                    step = {ranges.yeastStep}
                 />
                 <label className='unit'>%</label>
                 </div>

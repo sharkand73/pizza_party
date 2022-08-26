@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Header from './Header';
 import Footer from "./Footer";
 import Next from './Next';
+import { ranges } from '../supporting-code/Settings';
 
 const Dough = ({ values, setValues} ) => {
     const next = '/hydration';
@@ -25,8 +26,9 @@ const Dough = ({ values, setValues} ) => {
                     id = 'dough-input'
                     value = {doughWeight} 
                     onChange = {e => setDoughWeight(e.target.value)}
-                    min = {150}
-                    max = {10000}
+                    min = {ranges.doughMin}
+                    max = {ranges.doughMax}
+                    step = {ranges.doughStep}
                 />
                 <label className='unit'>g</label>
                     </div>

@@ -3,6 +3,7 @@ import Header from './Header';
 import Footer from "./Footer";
 import Next from './Next';
 import Back from './Back';
+import { ranges } from '../supporting-code/Settings';
 
 const Salt = ({ values, setValues }) => {
     const next = '/oil';
@@ -19,7 +20,7 @@ const Salt = ({ values, setValues }) => {
         <div className = 'container'>
             <Header text = '' />
             <div className = 'body'>
-                <div className = 'input'>
+                <div className = 'input-div'>
                     <label className = 'label'>
                     Salt?
                     </label>
@@ -27,9 +28,9 @@ const Salt = ({ values, setValues }) => {
                     id = 'salt-input'
                     value = {salt} 
                     onChange = {e => setSalt(e.target.value)}
-                    min = {0}
-                    max = {4}
-                    step = {0.1}
+                    min = {ranges.saltMin}
+                    max = {ranges.saltMax}
+                    step = {ranges.saltStep}
                 />
                 <label className='unit'>%</label>
                 </div>
