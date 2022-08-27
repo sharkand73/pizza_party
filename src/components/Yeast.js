@@ -36,7 +36,7 @@ const Yeast = ({ values, setValues }) => {
                 </div>
                 <div className='nav'>
                     <Back link={back} />
-                    <Next link={next} />
+                    <Next link={next} text='Next' />
                 </div>
             </div>
             <Footer />

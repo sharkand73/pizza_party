@@ -1,13 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import Header from './Header';
 import Footer from "./Footer";
-import Calculate from './Calculate';
+import Next from './Next';
 import Back from './Back';
 import { ranges } from '../supporting-code/Settings';
 
 const Oil = ({ values, setValues }) => {    
     const back = '/salt';
     const next = '/results';
+    const text = 'Calculate';
 
     const [oil, setOil] = useState(values.oil);
     useEffect(() => {
@@ -36,7 +37,7 @@ const Oil = ({ values, setValues }) => {
                 </div>                
                 <div className='nav'>
                     <Back link={back} />
-                    <Calculate link={next} />                    
+                    <Next link={next} text={text} />                    
                 </div>
             </div>
             <Footer />

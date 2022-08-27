@@ -33,7 +33,7 @@ const Dough = ({ values, setValues} ) => {
                 <label className='unit'>g</label>
                     </div>
                 <div className='first-nav'>
-                    <Next link={next} />
+                    <Next link={next} text='Next' />
                 </div>
             </div>
             <Footer />

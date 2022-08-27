@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './components/Home';
@@ -15,6 +15,9 @@ import './App.css';
 function App() {
 
 const [values, setValues] = useState(defaultValues);
+useEffect(()=>{
+  console.log(typeof(values.doughWeight));
+}, [values]);
 
   return (
     <Router>
