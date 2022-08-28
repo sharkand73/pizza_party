@@ -8,7 +8,7 @@ import { ranges } from '../supporting-code/Settings';
 const Oil = ({ values, setValues }) => {    
     const back = '/salt';
     const next = '/results';
-    const text = 'Calculate';
+    const text = 'Results';
 
     const [oil, setOil] = useState(values.oil);
     useEffect(() => {
@@ -23,7 +23,7 @@ const Oil = ({ values, setValues }) => {
             <div className = 'body'>
                 <div className = 'input-div'>
                     <label className = 'label'>
-                    Oil?
+                    Oil
                     </label>
                     <input type='number' 
                     id = 'oil-input'
@@ -32,6 +32,7 @@ const Oil = ({ values, setValues }) => {
                     min = {ranges.oilMin}
                     max = {ranges.oilMax}
                     step = {ranges.oilStep}
+                    autoFocus = {true}
                 />
                 <label className='unit'>%</label>
                 </div>                

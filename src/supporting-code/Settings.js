@@ -1,4 +1,4 @@
-export const title = 'Pizza Calculator';
+export const title = 'Pizza Party';
 
 export const defaultValues = {
     doughWeight: 1000,

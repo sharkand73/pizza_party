@@ -22,7 +22,7 @@ const Salt = ({ values, setValues }) => {
             <div className = 'body'>
                 <div className = 'input-div'>
                     <label className = 'label'>
-                    Salt?
+                    Salt
                     </label>
                     <input type='number'
                     id = 'salt-input'
@@ -31,6 +31,7 @@ const Salt = ({ values, setValues }) => {
                     min = {ranges.saltMin}
                     max = {ranges.saltMax}
                     step = {ranges.saltStep}
+                    autoFocus = {true}
                 />
                 <label className='unit'>%</label>
                 </div>

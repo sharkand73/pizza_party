@@ -20,7 +20,7 @@ const Dough = ({ values, setValues} ) => {
             <div className = 'body'>
                 <div className = 'input-div'>
                     <label className = 'label'>
-                    Weight of dough?
+                    Dough weight
                     </label>
                     <input type='number' 
                     id = 'dough-input'
@@ -29,6 +29,7 @@ const Dough = ({ values, setValues} ) => {
                     min = {ranges.doughMin}
                     max = {ranges.doughMax}
                     step = {ranges.doughStep}
+                    autoFocus = {true}
                 />
                 <label className='unit'>g</label>
                     </div>

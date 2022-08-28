@@ -22,7 +22,7 @@ const Hydration = ({ values, setValues }) => {
             <div className = 'body'>
                 <div className = 'input-div'>
                     <label className = 'label'>
-                 Hydration?
+                 Hydration
                     </label>
                     <input type='number'
                     id = 'hydration-input'
@@ -31,6 +31,7 @@ const Hydration = ({ values, setValues }) => {
                     min = {ranges.hydrationMin}
                     max = {ranges.hydrationMax}
                     step = {ranges.hydrationStep}
+                    autoFocus = {true}
                 />
                 <label className='unit'>%</label>
                 </div>

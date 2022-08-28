@@ -22,7 +22,7 @@ const Yeast = ({ values, setValues }) => {
             <div className = 'body'>
                 <div className = 'input-div'>
                     <label className = 'label'>
-                    Yeast?
+                    Yeast
                     </label>
                     <input type='number'
                     id = 'yeast-input'
@@ -31,6 +31,7 @@ const Yeast = ({ values, setValues }) => {
                     min = {ranges.yeastMin}
                     max = {ranges.yeastMax}
                     step = {ranges.yeastStep}
+                    autoFocus = {true}
                 />
                 <label className='unit'>%</label>
                 </div>

@@ -11,7 +11,7 @@ const Results = ({ values }) => {
 
     const back = '/oil';
     const next = '/';
-    const text = 'Start Over';
+    const text = 'Home';
 
     const results = calculateWeights(values);
 
