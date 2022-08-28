@@ -76,7 +76,7 @@ input {
   width: 6rem;
 }
 
-#dough-input {
+#dough-input, #flour-input {
   width: 9rem;
 }
 
@@ -197,7 +197,7 @@ input {
   }
 
   .col1 {
-    width: 35%;
+    width: 40%;
   }
 
 }

@@ -5,9 +5,9 @@ import Next from './Next';
 import Back from './Back';
 import { ranges } from '../supporting-code/Settings';
 
-const Hydration = ({ values, setValues }) => {
+const Hydration = ({ values, setValues, useFlour }) => {
     const next = '/yeast';
-    const back = '/dough';
+    const back = useFlour ? '/flour' : '/dough';
 
     const [hydration, setHydration] = useState(values.hydration);
     useEffect(() => {

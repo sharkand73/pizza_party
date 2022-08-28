@@ -10,7 +10,15 @@ const Home = () => {
         <div className='container'>
             <Header text = {title} />
             <div className='body start'>
-                <StartButton link = 'dough' />
+                <div>
+                    <div>
+                        Use dough weight
+                    </div>
+                    <div>
+                        Use flour weight
+                    </div>
+                </div>
+                <StartButton link = 'flour' />
             </div>
             <Footer />        
         </div>
