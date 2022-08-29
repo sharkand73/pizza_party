@@ -22,14 +22,14 @@ const [useFlour, setUseFlour] = useState(true);
     <Router>
       <div className="App">      
         <Routes>
-          <Route index element={<Home values={values} setValues={setValues} useFlour={useFlour} />}  />
+          <Route index element={<Home values={values} setValues={setValues} useFlour={useFlour} setUseFlour={setUseFlour} />}  />
           <Route path='flour' element={<Flour values={values} setValues={setValues} />}  />
           <Route path='dough' element={<Dough values={values} setValues={setValues} />}  />
           <Route path='hydration' element={<Hydration values={values} setValues={setValues} useFlour={useFlour}/>}  />
           <Route path='yeast' element={<Yeast values={values} setValues={setValues} />}  />
           <Route path='salt' element={<Salt values={values} setValues={setValues} />}  />
           <Route path='oil' element={<Oil values={values} setValues={setValues} />}  />
-          <Route path='results' element={<Results values={values} />}  />
+          <Route path='results' element={<Results values={values} useFlour={useFlour} />}  />
         </Routes>      
       </div>
     </Router>

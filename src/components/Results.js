@@ -7,13 +7,13 @@ import Next from './Next';
 import { calculateWeights } from '../supporting-code/Helper';
 import ResultsTable from './ResultsTable';
 
-const Results = ({ values }) => {
+const Results = ({ values, useFlour }) => {
 
     const back = '/oil';
     const next = '/';
     const text = 'Home';
 
-    const results = calculateWeights(values);
+    const results = calculateWeights(values, useFlour);
 
     return (
         <div className = 'container'>

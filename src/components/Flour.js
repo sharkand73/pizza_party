@@ -2,10 +2,12 @@ import React, { useState, useEffect } from 'react';
 import Header from './Header';
 import Footer from "./Footer";
 import Next from './Next';
+import Back from './Back';
 import { ranges } from '../supporting-code/Settings';
 
 const Flour = ({ values, setValues} ) => {
     const next = '/hydration';
+    const back = '/';
 
     const [flourWeight, setFlourWeight] = useState(values.flourWeight);
     useEffect(() => {
@@ -33,8 +35,9 @@ const Flour = ({ values, setValues} ) => {
                 />
                 <label className='unit'>g</label>
                     </div>
-                <div className='first-nav'>
-                    <Next link={next} text='Next' />
+                <div className='nav'>
+                    <Back link={back} />
+                    <Next link={next} text='Next' />                    
                 </div>
             </div>
             <Footer />

@@ -33,12 +33,42 @@ a {
   overflow-y: auto;
 }
 
-.body, h1 {
+.body, h1, .tick {
   -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
   -moz-animation: fadein 2; /* Firefox < 16 */
    -ms-animation: fadein 2s; /* Internet Explorer */
     -o-animation: fadein 2s; /* Opera < 12.1 */
        animation: fadein 2s;
+}
+
+.select-options {
+  width: 100%;
+  margin-bottom: 3%;
+  font-size: 36pt;
+}
+
+.home-option {
+  width: 70%;
+  margin-left: 10%;
+  margin-right: 10%;
+  padding: 1%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.home-option:hover {
+  background-color: lightgray;
+}
+
+.home-option-text {
+  color: #777;
+  font-weight: 500;
+  width: 70%;
+}
+
+.tick {
+  width: 10%;
+  color: green;
 }
 
 .start {
@@ -85,6 +115,7 @@ input {
   flex-direction: row;
   justify-content: flex-end;
 }
+
 .nav {
   display: flex;
   flex-direction: row;
@@ -176,7 +207,20 @@ input {
   to   { opacity: 1; }
   }
 
+
+
+
 @media only screen and (max-width: 700px) {
+  .select-options {
+    font-size: 20pt;
+ }
+ .home-option:hover {
+  background-color: white;
+ }
+
+ .home-option-text {
+  width: 80%;
+ }
 
   .label {
     display: block;
