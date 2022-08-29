@@ -1,5 +1,18 @@
-export const calculateWeights = function(data, useFlour){
+const convertFromString = (stringData) => { return(
+    {
+    flourWeight: parseInt(stringData.flourWeight),
+    doughWeight: parseInt(stringData.doughWeight),
+    hydration: parseFloat(stringData.hydration),
+    yeast: parseFloat(stringData.yeast),
+    salt: parseFloat(stringData.salt),
+    oil: parseFloat(stringData.oil)
+    }
+)};
 
+export const calculateWeights = function(stringData, useFlour){
+
+    const data = convertFromString(stringData);
+    
     const round = (number, dp) => Math.round(number * (10**dp)) / (10**dp);
 
     const multiplier = (100 + data.hydration + data.yeast + data.salt + data.oil) / 100;

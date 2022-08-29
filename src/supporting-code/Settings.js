@@ -1,12 +1,12 @@
 export const title = 'Pizza Party';
 
 export const defaultValues = {
-    flourWeight: 500,
-    doughWeight: 1000,
-    hydration: 60,
-    yeast: 2.0,
-    salt: 2.5,
-    oil: 4.0
+    flourWeight: '500',
+    doughWeight: '1000',
+    hydration: '60',
+    yeast: '2.0',
+    salt: '2.5',
+    oil: '4.0'
 }
 
 export const ranges = {

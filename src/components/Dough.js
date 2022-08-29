@@ -10,11 +10,6 @@ const Dough = ({ values, setValues} ) => {
     const back = '/';
 
     const [doughWeight, setDoughWeight] = useState(values.doughWeight);
-    useEffect(() => {
-        const temp = {...values};
-        temp.doughWeight = doughWeight;
-        setValues(temp);
-    },[doughWeight]);
 
     return (
         <div className = 'container'>
@@ -37,8 +32,7 @@ const Dough = ({ values, setValues} ) => {
                     </div>
                 <div className='nav'>
                     <Back link={back} />
-                    <Next link={next} text='Next' />
-                    
+                    <Next link={next} text='Next' />                    
                 </div>
             </div>
             <Footer />
