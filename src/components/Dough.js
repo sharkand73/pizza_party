@@ -10,6 +10,11 @@ const Dough = ({ values, setValues} ) => {
     const back = '/';
 
     const [doughWeight, setDoughWeight] = useState(values.doughWeight);
+    useEffect(() => {
+        const temp = {...values};
+        temp.doughWeight = doughWeight;
+        setValues(temp);
+    },[doughWeight]);
 
     return (
         <div className = 'container'>
